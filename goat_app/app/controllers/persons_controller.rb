@@ -4,8 +4,7 @@ class PersonsController < ApplicationController
 
 
   def index
-    # dane = Person.find_by(name: "Dane")
-    # @danes_goats = Goat.all.select(person_id: dane.id)
+    @persons = Person.all
   end
 
   def show

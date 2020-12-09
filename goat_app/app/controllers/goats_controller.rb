@@ -12,10 +12,6 @@ class GoatsController < ApplicationController
 
   end
 
-
-
-
-
   def new
 
   end
@@ -30,6 +26,5 @@ class GoatsController < ApplicationController
     def set_goat
       @goat = Goat.find(params[:id])
     end
-
 
 end
