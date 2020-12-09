@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   get "/goats/new", to: "goats#new"
   get "/persons/new", to: "persons#new"
 
-  resources :goats, only: [:index, :show]
-  resources :persons, only: [:index, :show]
-
   post "/goats", to: "goats#create"
   post "/persons", to: "persons#create"
+
+  get "goats/all", to: "goats#all"
+
+  resources :goats, only: [:index, :show]
+  resources :persons, only: [:index, :show]
 
 end
