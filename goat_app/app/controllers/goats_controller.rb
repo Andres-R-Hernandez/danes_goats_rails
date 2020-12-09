@@ -9,17 +9,15 @@ class GoatsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
-
   end
 
   def create
-
+    Goat.create(name: params[:goat][:name], age: params[:goat][:age], person_id: params[:goat][:person_id])
+    redirect_to goats_path
   end
-
 
   private
 
